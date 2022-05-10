@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    {% block body%}
+
+    <div class="btn-group-vertical">
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Processos
+                </button>
+                <div class="dropdown-menu">
+                 <a class="dropdown-item" href="{% url 'itbi:incluir_processo' %}">Incluir</a>
+                 <a class="dropdown-item" href="{% url 'itbi:listar_processo' %}">Editar</a>
+                 <a class="dropdown-item" href="#">Distribuir</a>
+                  <a class="dropdown-item" href="#">Consultar</a>
+                </div>
+              </div>
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Ordens de Serviço
+                </button>
+                <div class="dropdown-menu">
+                 <a class="dropdown-item" href="#">Incluir</a>
+                 <a class="dropdown-item" href="#">Editar</a>
+                 <a class="dropdown-item" href="#">Distribuir</a>
+                  <a class="dropdown-item" href="#">Consultar</a>
+                </div>
+              </div>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Repositório de documentos
+              </button>
+              <div class="dropdown-menu">
+               <a class="dropdown-item" href="#">Relatório de lançamentos</a>
+               <a class="dropdown-item" href="#">Relatório consolidado</a>
+              </div>
+            </div>
+            <button type="button" class="list-group-item list-group-item-action">Cadastro de Contribuintes</button>
+            <a class="btn btn-dark" href="{% url 'pvi:inicio' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Portal de Avaliação de Imóveis</a>
+            <button type="button" class="list-group-item list-group-item-action">Emissão de AINF</button>
+            <button type="button" class="list-group-item list-group-item-action">Emissão de Intimação</button>
+            <button type="button" class="list-group-item list-group-item-action">Emissão de NLCT</button>
+            <button type="button" class="list-group-item list-group-item-action">Emissão de Guia DAM</button>
+            <a class="btn btn-dark" href="http://bae.capital.ms.gov.br/documentosmunicipais/guia.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Emissão de Guia de Informação do ITBI</a>
+            <button type="button" class="list-group-item list-group-item-action">Implantação TIQUE</button>
+    </div>
+      
+        
+    {% endblock %}  
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block body%}
+    <h3>Processo Administrativo: {{processo}}/{{ano}} </h3>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col-sm">Auditor</th>
+            <th scope="col-sm">Matrícula</th>
+            <th scope="col-sm">Assunto</th>
+            <th scope="col-sm">CNPJ/CPF Contibuinte</th>
+            <th scope="col-sm">Nome Contibuinte</th>
+            <th scope="col-sm">Inscrição Municipal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{auditor}}</th>
+            <td>{{matricula}}</td>
+            <td>{{objeto}}</td>
+            <td>{{cnpj}}</td>
+            <td>{{nome_contrib}}</td>
+            <td>{{ins_imobiliaria}}</td>
+          </tr>
+        </tbody>
+    </table>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group"></div>
+        {{form3}}
+    
+        <button type="submit">Salvar</button>
+      </form>
+      <div class="container my-5 py-5"></div>
+      {% endblock %}  
+</body>
+</html>
