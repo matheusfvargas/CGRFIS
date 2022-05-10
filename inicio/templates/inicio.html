@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    {% block body%}
+
+    <div class="row py-4">
+        <div class="col-3">
+           <div class="card text-white bg-info mx-3 my-3" style="max-width: 18rem;">
+        <div class="card-header text-center">ITBI</div>
+        <div class="card-body">
+            <h5 class="card-title">Gestão Interna</h5>
+            <p class="card-text">Processos, repositórios e informações relacionadas ao imposto </p>
+            <div class="container text-center">
+            <a type="button" class="btn btn-dark" href="{% url 'itbi:index' %}" class="btn btn-primary">Acessar</a>
+            </div>
+        </div>        
+        </div> 
+        </div>
+        <div class="col-3">
+            <div class="card text-white bg-success mx-3 my-3 pb-5" style="max-width: 18rem;">
+            <div class="card-header"> Outro app</div>
+            <div class="card-body">
+                <h5 class="card-title">Título</h5>
+                <p class="card-text">Algum texto</p>
+                <a type="button" class="btn btn-dark" href="#" class="btn btn-primary">Acessar</a>
+            </div>
+            </div>
+            </div>
+
+        <div class="col-3">
+            <div class="card text-white bg-primary mx-3 my-3 pb-5" style="max-width: 18rem;">
+            <div class="card-header">Mais um app</div>
+            <div class="card-body">
+                <h5 class="card-title">Título</h5>
+                <p class="card-text">Algum texto</p>
+                <a type="button" class="btn btn-dark" href="#" class="btn btn-primary">Acessar</a>
+            </div>
+            </div>
+        </div>
+
+    </div>
+<div class="container py-5"></div>
+    {% endblock %}
+
+</body>
+</html>
